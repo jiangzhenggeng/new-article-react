@@ -1,0 +1,19 @@
+@import "../../style/scss/helpers/functions";
+
+.editor__wrap {
+  background: transparent;
+  &.full__screen {
+    background: #f2f2f2;
+
+    &, .edui-editor-toolbarbox {
+      position: fixed;
+      left: 0;
+      top: 0;
+      width: 100%;
+    }
+  }
+  .editor__inner {
+    margin: auto;
+    background: #ffffff;
+  }
+}

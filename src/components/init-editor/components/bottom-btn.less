@@ -1,0 +1,38 @@
+.dialog__bottom-wrap {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 15px;
+  border-top: 1px solid rgba(0, 0, 0, 0.2);
+  .dialog__bottom {
+    @h: 42px;
+    display: block;
+    background: #F66039;
+    color: #fff;
+    font-size: 14px;
+    text-align: center;
+    height: @h;
+    line-height: @h;
+    width: 120px;
+    border-radius: 3px;
+    cursor: pointer;
+    user-select: none;
+    margin-left: 10px;
+    &:active {
+      opacity: 0.8;
+    }
+    &.gary {
+      background: #D8D8D8;
+    }
+    &.red {
+      background: #F66039;
+    }
+  }
+  .dialog__insert-type {
+    cursor: pointer;
+    user-select: none;
+    color: #f86337;
+    text-decoration: underline;
+  }
+}
