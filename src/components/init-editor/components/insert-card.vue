@@ -1,30 +1,3 @@
-<style lang="less">
-  @import "./bottom-btn";
-
-  .insert-card {
-    &.model__wrap .model__body {
-      padding-top: 0;
-    }
-
-    .el-form-item__content {
-      display: flex;
-      min-height: 40px;
-      align-items: center;
-    }
-
-    .el-tabs__active-bar,
-    .el-tabs__nav-wrap::after {
-      height: 1px;
-    }
-
-    .el-tabs__item {
-      font-weight: normal;
-    }
-  }
-
-</style>
-
-
 <template>
   <transition name="window__modal">
     <dialog-base

@@ -1,5 +1,6 @@
 import './style.scss'
-import React, {Component} from 'react';
+import React, {Component} from 'react'
+import PropTypes from 'prop-types'
 import $ from 'jquery'
 
 import {
@@ -91,18 +92,16 @@ class CreateEditor extends Component {
 
 }
 
-CreateEditor
-	.propTypes = {
-	name: React.PropTypes.string.isRequired,
-	content: React.PropTypes.string,
-	height: React.PropTypes.number,
-	width: React.PropTypes.number,
-	full_screen: React.PropTypes.bool,
-	triggerClickEvent: React.PropTypes.func.isRequired,
-	editorReady: React.PropTypes.func
+CreateEditor.propTypes = {
+	name: PropTypes.string.isRequired,
+	content: PropTypes.string,
+	height: PropTypes.number,
+	width: PropTypes.number,
+	full_screen: PropTypes.bool,
+	triggerClickEvent: PropTypes.func.isRequired,
+	editorReady: PropTypes.func
 }
-CreateEditor
-	.defaultProps = {
+CreateEditor.defaultProps = {
 	content: '',
 	height: $(window).height() - 60,
 	width: 850,

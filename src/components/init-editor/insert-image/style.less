@@ -1,0 +1,178 @@
+@import "../bottom-btn";
+
+.jui-uploader {
+  font-size: 12px;
+  .uploader-btn {
+    padding: 0;
+    border: 1px dashed #ccc !important;
+    border-radius: 0;
+    &:hover {
+      background: none;
+    }
+    .jui-uploader__btn-inner {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      color: #c7c7c7;
+      img {
+        width: 42px;
+      }
+    }
+  }
+  .uploader-list {
+    height: 320px;
+    overflow: auto;
+    overflow-x: hidden;
+    overflow-y: auto;
+    &::-webkit-scrollbar {
+      width: 3px;
+      height: 3px;
+    }
+    .uploader-list-ul {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    li {
+      width: 20%;
+      height: 126px;
+      overflow: hidden;
+      box-sizing: border-box;
+      padding: 5px;
+    }
+    .uploader-list-inner {
+      width: 100%;
+      height: 100%;
+      box-sizing: border-box;
+      border: 1px solid #e6e6e6;
+      position: relative;
+    }
+    img {
+      display: block;
+    }
+    /*预览图片*/
+    .item-view {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+      z-index: 1;
+      img {
+        max-width: 100%;
+        max-height: 100%;
+      }
+    }
+    /*关闭按钮*/
+    .item-close {
+      position: absolute;
+      height: 16px;
+      width: 16px;
+      right: 3px;
+      top: 3px;
+      background: #000;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      user-select: none;
+      z-index: 5;
+      &:active {
+        opacity: 0.6;
+      }
+      img {
+        width: 12px;
+      }
+    }
+    /*旋转*/
+    .item-rotation {
+    @extend .item-close;
+      right: 22px;
+      z-index: 2;
+    }
+    /*插入*/
+    .item-insert {
+      position: absolute;
+      height: 40px;
+      width: 100%;
+      left: 0;
+      top: (126 - 40) / 2 * 1px;
+      z-index: 2;
+      background: rgba(0, 0, 0, 0.7);
+      user-select: none;
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+    }
+    /*选中*/
+    .item-selected {
+      position: absolute;
+      height: 0px;
+      width: 0px;
+      right: 0;
+      bottom: 0;
+      z-index: 3;
+      border-width: 16px;
+      border-style: solid;
+      border-color: transparent;
+      border-right-color: #fc584e;
+      border-bottom-color: #fc584e;
+      cursor: pointer;
+      user-select: none;
+      &.no-selected{
+        border-right-color: #ccc;
+        border-bottom-color: #ccc;
+        display: none;
+      }
+      img {
+        position: absolute;
+        right: -19px;
+        bottom: -15px;
+        width: 26px;
+      }
+    }
+    /*进度条*/
+    .uploader-progress-wrap {
+      position: absolute;
+      height: 3px;
+      width: 100%;
+      left: 0;
+      bottom: 0;
+      z-index: 5;
+      .uploader-progress-bar {
+        background: #fc584e;
+        width: 0%;
+        height: 100%;
+      }
+    }
+    /*鼠标进入状态*/
+    .hover-show {
+      display: none;
+    }
+    .uploader-list-inner:hover .hover-show {
+      display: flex;
+    }
+    /*状态*/
+    .uploading-status {
+      position: absolute;
+      z-index: 3;
+      background: rgba(0, 0, 0, 0.5);
+      width: 100%;
+      height: 100%;
+      left: 0;
+      top: 0;
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    /*图片加载状态*/
+    .image-loading-status {
+      display: none;
+    }
+  }
+}
+
+

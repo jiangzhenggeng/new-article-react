@@ -1,16 +1,17 @@
-import React from 'react';
-import ReactDom from 'react-dom';
-import {Provider} from 'react-redux';
+import 'core-js/es6/map'
+import 'core-js/es6/set'
+import 'raf/polyfill'
 
-import App from './app';
-import configureStore from '../../redux/store/configureStore';
+import React from 'react'
+import ReactDom from 'react-dom'
+import { BrowserRouter } from 'react-router-dom'
 
-let store = configureStore();
+import App from './app'
 
 ReactDom.render(
-	<Provider store={store}>
+	<BrowserRouter>
 		<App/>
-	</Provider>,
+	</BrowserRouter>,
 	document.getElementById('app')
 );
 

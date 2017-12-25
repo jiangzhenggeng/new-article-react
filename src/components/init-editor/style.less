@@ -1,4 +1,17 @@
-@import "./components/animate";
+.window__modal-enter-active {
+  animation: window__modal-dialog-zoom .3s;
+}
+
+@keyframes window__modal-dialog-zoom {
+  0% {
+    opacity: 0;
+    transform: scale(1.15);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
 
 .editor__wrap {
   width: 850px;

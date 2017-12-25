@@ -1,0 +1,37 @@
+@import "../bottom-btn";
+
+.link__wrap {
+  font-size: 14px;
+  margin: 10px 0;
+
+  .link__cell {
+    display: flex;
+    align-items: center;
+    margin: 20px;
+  }
+  .link__cell-input {
+    flex: 1;
+    position: relative;
+  }
+  .error-tips {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 5px;
+    font-size: 12px;
+    color: red;
+  }
+  .input {
+    border: none;
+    height: 34px;
+    display: block;
+    width: 100%;
+    border-radius: 5px;
+    padding: 0 10px;
+    outline: none;
+    box-shadow: 0 0 0 1px #ccc;
+    &:focus {
+      box-shadow: 0 0 0 1px #F66039;
+    }
+  }
+}
